@@ -16,16 +16,12 @@ while N >0:
     if N > 0:
         now_play = player
         print('Конфет:', N)
-        print(f'Сейчас ходит {now_play}, сколько возьмете конфет? (от 1 до 28 включительно)')
-        player_choice = int(input())
-        while player_choice > 28 or player_choice < 0:
-            print('Можно взять только от 0 до 28 конфет, так сколько берете?')
-            player_choice = int(input())
-        N -= player_choice
+        print(f'Сейчас ходит {now_play}, сколько возьмете конфет?')
+        N -= int(input())
     if N > 0:
         now_play = 'бот'
         print('Конфет:', N)
-        print(f'Сейчас ходит {now_play}, сколько возьмете конфет? (от 1 до 28 включительно)')
+        print(f'Сейчас ходит {now_play}, сколько возьмете конфет?')
         if N > max_choice:
             bot_choice = randint(1, max_choice)
         else:
